@@ -3,8 +3,10 @@
     <input type="text" class="rounded border-2 border-gray-200 w-full" placeholder="Search for Meals">
   </div>
 
-  <div class="flex gap-1">
-
+  <div class="flex gap-2 justify-center mt-2">
+    <router-link to="/" v-for="letter of letters" >
+      {{ letter }}
+    </router-link>
   </div>
 </template>
 
@@ -14,5 +16,5 @@ import store from '../store';
 
 
   const meals = computed(() => store.state.meals)
-  // const  
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 </script>
